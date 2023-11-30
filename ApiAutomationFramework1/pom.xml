@@ -37,6 +37,21 @@
 </dependency>
 
 
+<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+<dependency>
+    <groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>1.0.2</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.3.0</version>
+ <!--   <scope>test</scope>   //it is only availble to classes defined in src/test/java .., if u need it to be available eveywhere, then u need to remove this entire line-->
+</dependency>
 
     
   </dependencies>
