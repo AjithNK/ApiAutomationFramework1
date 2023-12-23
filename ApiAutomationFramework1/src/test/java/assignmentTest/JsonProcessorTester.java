@@ -77,6 +77,15 @@ public class JsonProcessorTester {
 	  
   
   
+
+  @Test
+  public void convertJsonFileToJsonObject() {
+	  JsonProcessor obj = new JsonProcessor();
+	  
+	//	JSONObject jsonObj =  obj.readFromJsonFilePath("D:\\AJITH\\API_TRAINING_GIT_REPO\\git\\ApiAutomationFramework1\\ApiAutomationFramework1\\src\\main\\resources\\apis\\api.json");
+		
+	  
+  }
   
   
 }

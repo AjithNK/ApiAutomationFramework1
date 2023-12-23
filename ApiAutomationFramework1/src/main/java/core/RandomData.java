@@ -18,23 +18,31 @@ public class RandomData {
 		
 	}
 	
-	//Assignment -regular expression \\d
-	//implement regixy and generate random phone number
-	public void getRandomPhoneNo() {
-	//regify()
-		FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en-GB"), new RandomService());
-		String email = fakeValuesService.regexify(getRandomEmail());
-	}
 	
-	public void getRandomData() {
+	
+	public String getRandomPhoneNo() {
+		//we can use regexify() for regular expression - implement regex and generate random phone number
+		
+		//FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en-GB"), new RandomService());
+		//String email = fakeValuesService.regexify(getRandomEmail());
+		
+		//OR
+		
+		Faker faker = new Faker(new Locale("us")); // Use the US locale
+		String phoneNumber = faker.phoneNumber().cellPhone();
+		
+		System.out.println(phoneNumber);
+        return phoneNumber;
 		
 	}
-
 	
-	public void getRandomAddress() {
+	
+	public String getRandomAddress() {
 		
-		Faker faker = new Faker();
-		faker.address().city();
+		Faker faker=new Faker();
+		String address = faker.address().fullAddress();
+		System.out.println(address);
+		return address;
 		
 		
 	}
