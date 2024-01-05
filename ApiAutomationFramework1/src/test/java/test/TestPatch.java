@@ -1,5 +1,7 @@
 package test;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -12,9 +14,11 @@ import core.APIHelper;
 import core.APIRequest;
 import io.restassured.response.Response;
 
+@SuppressWarnings({"unused", "unchecked"})
 public class TestPatch {
 	
-	@Test
+	//PATCH request (Partial Update user) with hard-coded values
+	@Test(enabled=true)
 	public void testPatch() {
 		
 		//Headers
@@ -44,5 +48,74 @@ public class TestPatch {
 		
 		
 	}
+	
+	//PATCH request (Partial Update user) with details passed from json file
+	@Test(enabled=true)
+	public void testPatch2() {
+	
+		//Creating the JSON file path
+		String jsonFileName="PartialUpdateUserDetails2.json";
+		String filePath=Paths.get(System.getProperty("user.dir"),"src","main","resources","apis",jsonFileName).toString();
+	
+		//Creating Request object
+		APIRequest apiRequest = new APIRequest(filePath);
+	
+		//Creating the object of APIHelper class & calling the hitAPI() method using this object and obtaining the response
+		APIHelper apihelper = new APIHelper();
+		Response response = apihelper.hitAPI(apiRequest);
+	
+		//Console output of the response body and headers
+		System.out.println(response.asPrettyString());
+		System.out.println(response.getHeaders());
+	
+		//Assertions on the response
+		Assert.assertEquals(response.getStatusCode(),200);
+		Assert.assertEquals(response.getStatusLine(), "HTTP/1.1 200 OK");
+		Assert.assertEquals(response.getContentType(),"application/json; charset=utf-8");
+		Assert.assertTrue(response.getTimeIn(TimeUnit.MILLISECONDS)<3000);
+	
+	}
+	
+	
+	//PATCH request (Partial Update user) with details passed from json file and request is dynamic
+	@Test(enabled=true)
+	public void testPatch3() {
+		
+		//Creating the JSON file path
+		String jsonFileName="PartialUpdateUserDetails3.json";
+		String filePath=Paths.get(System.getProperty("user.dir"),"src","main","resources","apis",jsonFileName).toString();
+			
+		HashMap<String, String> metaInfo = new HashMap<String, String>();
+		metaInfo.put("id", "5");
+		
+		//Creating Request object
+		APIRequest apiRequest = new APIRequest(filePath, metaInfo);
+		
+		//Creating the object of APIHelper class & calling the hitAPI() method using this object and obtaining the response
+		APIHelper apiHelper = new APIHelper();
+		Response response = apiHelper.hitAPI(apiRequest);
+		
+		//Console output of the response body and headers
+		System.out.println(response.asPrettyString());
+		System.out.println(response.getHeaders());
+			
+		//Assertions on the response
+		Assert.assertEquals(response.getStatusCode(),200);
+		Assert.assertEquals(response.getStatusLine(), "HTTP/1.1 200 OK");
+		Assert.assertEquals(response.getContentType(),"application/json; charset=utf-8");
+		Assert.assertTrue(response.getTimeIn(TimeUnit.MILLISECONDS)<3000);
+		
 
+			
+	}
+	
+	//1 TEST PENDING
+	//PATCH request (Partial Update user) with details passed from json file and request is dynamic & passed as a pojo
+	@Test(enabled=false)
+	public void testPatch4() {
+		
+		
+	}
+		
+		
 }

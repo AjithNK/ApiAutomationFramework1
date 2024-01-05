@@ -13,7 +13,7 @@ import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import requestPojo.RequestPojoPost;
 
-public class Test1Post {
+public class Test1OldPost {
 	
 	//POST REQUEST 1 - Create User    
 	//(pass data as hard-coded values)
@@ -85,7 +85,7 @@ public class Test1Post {
 		 metaInfo.put("name", "Ram");
 		 metaInfo.put("job", "QA");
 		
-		  APIRequest apiRequestPost=new APIRequest("D:\\AJITH\\API_TRAINING_GIT_REPO\\git\\ApiAutomationFramework1\\ApiAutomationFramework1\\src\\main\\resources\\apis\\api2.json",metaInfo);
+		  APIRequest apiRequestPost=new APIRequest("D:\\AJITH\\API_TRAINING_GIT_REPO\\git\\ApiAutomationFramework1\\ApiAutomationFramework1\\src\\main\\resources\\apis\\api3.json",metaInfo);
 		  Response response=apiHelper.hitAPI(apiRequestPost);
 		  System.out.println(response.getStatusCode());
 		  Assert.assertEquals(201,response.getStatusCode());

@@ -12,9 +12,9 @@ import core.APIHelper;
 import core.APIRequest;
 import core.JsonProcessor;
 import io.restassured.response.Response;
-import pojo.ListUser;
+import pojo.listUsers.ListUsers;
 
-public class Test1 {
+public class Test1OldGet {
 	
 	//GET REQUEST 1 - Get Users     
 	//(pass data as hard-coded values)
@@ -38,11 +38,11 @@ public class Test1 {
 		// JsonPath - 1st method (suport.data)
 		// use pojo classes -2nd method
 
-		ListUser listUser = null;
+		ListUsers listUser = null;
 
 		ObjectMapper om = new ObjectMapper();
 		try {
-			listUser = om.readValue(jsonObj.toString(), ListUser.class);
+			listUser = om.readValue(jsonObj.toString(), ListUsers.class);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -92,10 +92,10 @@ public class Test1 {
 		Response response = apiHelper.hitAPI(apiRequest);
 		Assert.assertEquals(200, response.getStatusCode());
 
-		ListUser listUsers = null;
+		ListUsers listUsers = null;
 		ObjectMapper om = new ObjectMapper();
 		try {
-			listUsers = om.readValue(response.asString(), ListUser.class);
+			listUsers = om.readValue(response.asString(), ListUsers.class);
 		} catch (JsonMappingException e) {
 
 			e.printStackTrace();
@@ -148,4 +148,9 @@ public class Test1 {
 	
 	}
 
+	
+	//pending get
+	//single<resource>
+	//single<resource> not found
+	
 }
