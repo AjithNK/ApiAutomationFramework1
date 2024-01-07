@@ -26,7 +26,7 @@ public class TestGet {
 	
 	//GET request (Get all Users) with hard-coded values
 	@Test(enabled=true)
-	public void testGetUsers() {
+	public void verifyGetAllUsersFunctionalityWhenDataIsHardCoded() {
 		
 		//Creating the Request object
 		APIRequest apiRequest = new APIRequest("get", "/api/users?page=2");
@@ -83,7 +83,7 @@ public class TestGet {
 	
 	//GET request (Get Single User Details) with details passed from json file
 	@Test(enabled=true)
-	public void testGetSingleUser() {
+	public void verifyGetSingleUserDetailsWhenDataIsPassedFromJson() {
 		
 		//Creating the JSON file path
 		String jsonFileName="SingleUser.json";
@@ -142,7 +142,7 @@ public class TestGet {
 	 
 	//GET request (Get all Users) with details passed from json file
 	@Test(enabled = true)
-	public void testGetListUsers() {
+	public void verifyGetAllUsersFunctionalityWhenDataIsPassedFromJson() {
 		
 		//Creating the JSON file path
 		String jsonFileName="ListUsers.json";
@@ -207,7 +207,7 @@ public class TestGet {
 	 
 	//GET request (Single User Not Found) with details passed from json file
 	@Test(enabled = true)
-	public void testGetSingleUsersNotFound() {
+	public void verifyGetSingleUserNotFoundWhenDataIsPassedFromJson() {
 		
 		//Creating the JSON file path
 		String jsonFileName="SingleUserNotFound.json";
@@ -240,7 +240,7 @@ public class TestGet {
 	
 	//GET request (Get all Resources) with details passed from json file
 	@Test(enabled = true)
-	public void testGetListResources() {
+	public void verifyGetAllResourcesFunctionalityWhenDataIsPassedFromJson() {
 	
 		//Creating the JSON file path
 		String jsonFileName="ListResources.json";
@@ -306,7 +306,7 @@ public class TestGet {
 	
 	//GET request (Get Single Resource) with details passed from json file
 	@Test(enabled=true)
-	public void testGetSingleResource() {
+	public void verifyGetSingleResourceFunctionalityWhenDataIsPassedFromJson() {
 		
 		//Creating the JSON file path
 		String jsonFileName="SingleResource.json";
@@ -367,7 +367,7 @@ public class TestGet {
 	
 	//GET request (Single Resource Not Found) with details passed from json file
 	@Test(enabled=true)
-	public void testGetSingleResourceNotFound() {
+	public void verifyGetSingleResourceNotFoundFunctionalityWhenDataIsPassedFromJson() {
 
 		//Creating the JSON file path
 		String jsonFileName="GetSingleResourceNotFound.json";
@@ -400,7 +400,7 @@ public class TestGet {
 	
 	//GET request (Getting User Details with a delay in getting response) with details passed from json file
 	@Test(enabled=true) 
-	public void testGetDelayedResponse() {
+	public void verifyGetDelayedResponseFunctionalityWhenDataIsPassedFromJson() {
 			
 		//Creating the JSON file path
 		String jsonFileName="DelayedResponse.json";

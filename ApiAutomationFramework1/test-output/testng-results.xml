@@ -1,17 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="7" total="8" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="25" passed="25">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5478" started-at="2024-01-02T21:21:19 IST" finished-at="2024-01-02T21:21:24 IST">
+  <suite name="Suite" duration-ms="23534" started-at="2024-01-07T17:05:46 IST" finished-at="2024-01-07T17:06:09 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5478" started-at="2024-01-02T21:21:19 IST" finished-at="2024-01-02T21:21:24 IST">
+    <test name="Test1" duration-ms="9159" started-at="2024-01-07T17:05:46 IST" finished-at="2024-01-07T17:05:55 IST">
       <class name="test.TestPost">
-        <test-method status="PASS" signature="testRegistrationSuccessful()[pri:0, instance:test.TestPost@6ee52dcd]" name="testRegistrationSuccessful" duration-ms="5409" started-at="2024-01-02T21:21:19 IST" finished-at="2024-01-02T21:21:24 IST">
+        <test-method status="PASS" signature="verifyCreateUserFunctionalityWhenDataIsHardCoded()[pri:0, instance:test.TestPost@76f2b07d]" name="verifyCreateUserFunctionalityWhenDataIsHardCoded" duration-ms="4328" started-at="2024-01-07T17:05:46 IST" finished-at="2024-01-07T17:05:50 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRegistrationSuccessful -->
+        </test-method> <!-- verifyCreateUserFunctionalityWhenDataIsHardCoded -->
+        <test-method status="PASS" signature="verifyCreateUserFunctionalityWhenDataIsPassedFromJson()[pri:0, instance:test.TestPost@76f2b07d]" name="verifyCreateUserFunctionalityWhenDataIsPassedFromJson" duration-ms="721" started-at="2024-01-07T17:05:50 IST" finished-at="2024-01-07T17:05:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateUserFunctionalityWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyCreateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody()[pri:0, instance:test.TestPost@76f2b07d]" name="verifyCreateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody" duration-ms="886" started-at="2024-01-07T17:05:51 IST" finished-at="2024-01-07T17:05:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody -->
+        <test-method status="PASS" signature="verifyCreateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo()[pri:0, instance:test.TestPost@76f2b07d]" name="verifyCreateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo" duration-ms="805" started-at="2024-01-07T17:05:52 IST" finished-at="2024-01-07T17:05:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo -->
+        <test-method status="PASS" signature="verifyUserLoginUnsuccessfulWhenDataIsHardCoded()[pri:0, instance:test.TestPost@76f2b07d]" name="verifyUserLoginUnsuccessfulWhenDataIsHardCoded" duration-ms="746" started-at="2024-01-07T17:05:53 IST" finished-at="2024-01-07T17:05:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginUnsuccessfulWhenDataIsHardCoded -->
+        <test-method status="PASS" signature="verifyUserRegistrationSuccessfulWhenDataIsPassedFromJson()[pri:0, instance:test.TestPost@76f2b07d]" name="verifyUserRegistrationSuccessfulWhenDataIsPassedFromJson" duration-ms="742" started-at="2024-01-07T17:05:54 IST" finished-at="2024-01-07T17:05:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserRegistrationSuccessfulWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyUserRegistrationUnsuccessfulWhenDataPassedFromJsonAndDynamicRequestBody()[pri:0, instance:test.TestPost@76f2b07d]" name="verifyUserRegistrationUnsuccessfulWhenDataPassedFromJsonAndDynamicRequestBody" duration-ms="748" started-at="2024-01-07T17:05:54 IST" finished-at="2024-01-07T17:05:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserRegistrationUnsuccessfulWhenDataPassedFromJsonAndDynamicRequestBody -->
       </class> <!-- test.TestPost -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test1 -->
+    <test name="Test2" duration-ms="3059" started-at="2024-01-07T17:05:55 IST" finished-at="2024-01-07T17:05:58 IST">
+      <class name="test.TestPut">
+        <test-method status="PASS" signature="verifyUpdateUserFunctionalityWhenDataIsHardCoded()[pri:0, instance:test.TestPut@12cdcf4]" name="verifyUpdateUserFunctionalityWhenDataIsHardCoded" duration-ms="787" started-at="2024-01-07T17:05:55 IST" finished-at="2024-01-07T17:05:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpdateUserFunctionalityWhenDataIsHardCoded -->
+        <test-method status="PASS" signature="verifyUpdateUserFunctionalityWhenDataIsPassedFromJson()[pri:0, instance:test.TestPut@12cdcf4]" name="verifyUpdateUserFunctionalityWhenDataIsPassedFromJson" duration-ms="770" started-at="2024-01-07T17:05:56 IST" finished-at="2024-01-07T17:05:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpdateUserFunctionalityWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody()[pri:0, instance:test.TestPut@12cdcf4]" name="verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody" duration-ms="765" started-at="2024-01-07T17:05:57 IST" finished-at="2024-01-07T17:05:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody -->
+        <test-method status="PASS" signature="verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo()[pri:0, instance:test.TestPut@12cdcf4]" name="verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo" duration-ms="723" started-at="2024-01-07T17:05:57 IST" finished-at="2024-01-07T17:05:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo -->
+      </class> <!-- test.TestPut -->
+    </test> <!-- Test2 -->
+    <test name="Test3" duration-ms="2849" started-at="2024-01-07T17:05:58 IST" finished-at="2024-01-07T17:06:01 IST">
+      <class name="test.TestPatch">
+        <test-method status="PASS" signature="verifyPartialUpdateUserFunctionalityWhenDataIsHardCoded()[pri:0, instance:test.TestPatch@44c8afef]" name="verifyPartialUpdateUserFunctionalityWhenDataIsHardCoded" duration-ms="706" started-at="2024-01-07T17:05:58 IST" finished-at="2024-01-07T17:05:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPartialUpdateUserFunctionalityWhenDataIsHardCoded -->
+        <test-method status="PASS" signature="verifyPartialUpdateUserFunctionalityWhenDataIsPassedFromJson()[pri:0, instance:test.TestPatch@44c8afef]" name="verifyPartialUpdateUserFunctionalityWhenDataIsPassedFromJson" duration-ms="742" started-at="2024-01-07T17:05:59 IST" finished-at="2024-01-07T17:06:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPartialUpdateUserFunctionalityWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyPartialUpdateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody()[pri:0, instance:test.TestPatch@44c8afef]" name="verifyPartialUpdateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody" duration-ms="687" started-at="2024-01-07T17:06:00 IST" finished-at="2024-01-07T17:06:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPartialUpdateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody -->
+        <test-method status="PASS" signature="verifyPartialUpdateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo()[pri:0, instance:test.TestPatch@44c8afef]" name="verifyPartialUpdateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo" duration-ms="699" started-at="2024-01-07T17:06:00 IST" finished-at="2024-01-07T17:06:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPartialUpdateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo -->
+      </class> <!-- test.TestPatch -->
+    </test> <!-- Test3 -->
+    <test name="Test4" duration-ms="6948" started-at="2024-01-07T17:06:01 IST" finished-at="2024-01-07T17:06:08 IST">
+      <class name="test.TestGet">
+        <test-method status="PASS" signature="verifyGetAllResourcesFunctionalityWhenDataIsPassedFromJson()[pri:0, instance:test.TestGet@371a67ec]" name="verifyGetAllResourcesFunctionalityWhenDataIsPassedFromJson" duration-ms="526" started-at="2024-01-07T17:06:01 IST" finished-at="2024-01-07T17:06:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetAllResourcesFunctionalityWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyGetAllUsersFunctionalityWhenDataIsHardCoded()[pri:0, instance:test.TestGet@371a67ec]" name="verifyGetAllUsersFunctionalityWhenDataIsHardCoded" duration-ms="408" started-at="2024-01-07T17:06:02 IST" finished-at="2024-01-07T17:06:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetAllUsersFunctionalityWhenDataIsHardCoded -->
+        <test-method status="PASS" signature="verifyGetAllUsersFunctionalityWhenDataIsPassedFromJson()[pri:0, instance:test.TestGet@371a67ec]" name="verifyGetAllUsersFunctionalityWhenDataIsPassedFromJson" duration-ms="372" started-at="2024-01-07T17:06:02 IST" finished-at="2024-01-07T17:06:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetAllUsersFunctionalityWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyGetDelayedResponseFunctionalityWhenDataIsPassedFromJson()[pri:0, instance:test.TestGet@371a67ec]" name="verifyGetDelayedResponseFunctionalityWhenDataIsPassedFromJson" duration-ms="3711" started-at="2024-01-07T17:06:02 IST" finished-at="2024-01-07T17:06:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetDelayedResponseFunctionalityWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyGetSingleResourceFunctionalityWhenDataIsPassedFromJson()[pri:0, instance:test.TestGet@371a67ec]" name="verifyGetSingleResourceFunctionalityWhenDataIsPassedFromJson" duration-ms="412" started-at="2024-01-07T17:06:06 IST" finished-at="2024-01-07T17:06:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetSingleResourceFunctionalityWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyGetSingleResourceNotFoundFunctionalityWhenDataIsPassedFromJson()[pri:0, instance:test.TestGet@371a67ec]" name="verifyGetSingleResourceNotFoundFunctionalityWhenDataIsPassedFromJson" duration-ms="726" started-at="2024-01-07T17:06:07 IST" finished-at="2024-01-07T17:06:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetSingleResourceNotFoundFunctionalityWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyGetSingleUserDetailsWhenDataIsPassedFromJson()[pri:0, instance:test.TestGet@371a67ec]" name="verifyGetSingleUserDetailsWhenDataIsPassedFromJson" duration-ms="412" started-at="2024-01-07T17:06:07 IST" finished-at="2024-01-07T17:06:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetSingleUserDetailsWhenDataIsPassedFromJson -->
+        <test-method status="PASS" signature="verifyGetSingleUserNotFoundWhenDataIsPassedFromJson()[pri:0, instance:test.TestGet@371a67ec]" name="verifyGetSingleUserNotFoundWhenDataIsPassedFromJson" duration-ms="354" started-at="2024-01-07T17:06:08 IST" finished-at="2024-01-07T17:06:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetSingleUserNotFoundWhenDataIsPassedFromJson -->
+      </class> <!-- test.TestGet -->
+    </test> <!-- Test4 -->
+    <test name="Test5" duration-ms="1425" started-at="2024-01-07T17:06:08 IST" finished-at="2024-01-07T17:06:09 IST">
+      <class name="test.TestDelete">
+        <test-method status="PASS" signature="verifyDeleteUserFunctionalityWhenDataIsHardCoded()[pri:0, instance:test.TestDelete@1a3869f4]" name="verifyDeleteUserFunctionalityWhenDataIsHardCoded" duration-ms="698" started-at="2024-01-07T17:06:08 IST" finished-at="2024-01-07T17:06:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteUserFunctionalityWhenDataIsHardCoded -->
+        <test-method status="PASS" signature="verifyDeleteUserFunctionalityWhenDataIsPassedFromJson()[pri:0, instance:test.TestDelete@1a3869f4]" name="verifyDeleteUserFunctionalityWhenDataIsPassedFromJson" duration-ms="718" started-at="2024-01-07T17:06:09 IST" finished-at="2024-01-07T17:06:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteUserFunctionalityWhenDataIsPassedFromJson -->
+      </class> <!-- test.TestDelete -->
+    </test> <!-- Test5 -->
+  </suite> <!-- Suite -->
 </testng-results>

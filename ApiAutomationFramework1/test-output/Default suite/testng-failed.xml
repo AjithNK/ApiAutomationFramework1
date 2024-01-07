@@ -5,7 +5,7 @@
     <classes>
       <class name="test.TestPost">
         <methods>
-          <include name="testRegistrationSuccessful"/>
+          <include name="verifyUserLoginSuccessfulWhenDataPassedFromJsonAndDynamicRequestBody"/>
         </methods>
       </class> <!-- test.TestPost -->
     </classes>

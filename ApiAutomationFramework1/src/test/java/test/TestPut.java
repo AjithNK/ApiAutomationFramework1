@@ -1,6 +1,5 @@
 package test;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
@@ -11,17 +10,16 @@ import org.testng.annotations.Test;
 import core.APIHelper;
 import core.APIRequest;
 import core.JsonProcessor;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import junit.framework.Assert;
 import requestPojo.RequestPojoPut;
 
-@SuppressWarnings({"unused", "unchecked"})
+@SuppressWarnings({"unchecked"})
 public class TestPut {
 	
 	//PUT request (Update user) with hard-coded values
 	@Test(enabled=true)
-	public void updateUser() {    //validateUpdateUserFunctionalityWhenDataIsHardCoded
+	public void verifyUpdateUserFunctionalityWhenDataIsHardCoded() {   
 		
 		//Header
 		HashMap<String, String> headers = new HashMap<String,String>();
@@ -55,9 +53,8 @@ public class TestPut {
 	
 	//PUT request (Update user) with details passed from json file
 	@Test(enabled=true)
-	public void updateUser2() { //validateUpdateUserFunctionalityWhenDataIsPassedFromJson
+	public void verifyUpdateUserFunctionalityWhenDataIsPassedFromJson() { 
 	
-		
 		//Creating the JSON file path
 		String jsonFileName="UpdateUserDetails.json";
 		String filePath=Paths.get(System.getProperty("user.dir"),"src","main","resources","apis",jsonFileName).toString();
@@ -83,7 +80,7 @@ public class TestPut {
 	
 	//PUT request (Update user) with details passed from json file and request is dynamic
 	@Test(enabled=true)
-	public void updateUser3() {    //validateUpdateUserFunctionalityWhenDataPassedFromJson&DynamicRequestBody
+	public void verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody() {    
 			
 		//Creating the JSON file path
 		String jsonFileName="UpdateUserDetails3.json";
@@ -113,9 +110,9 @@ public class TestPut {
 	}
 			
 	
-	//1 TEST PENDING
-	@Test(enabled=false)		 //validateUpdateUserFunctionalityWhenDataPassedFromJson&RequestBodyAsPojo
-	public void updateUser4() {   //testPutOrchestrationUsingRequestPojo   -and request is dynamic 
+	//PUT request (Update user) with details passed from json file and request is passed as a pojo
+	@Test(enabled=true)
+	public void verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo() { 
 			
 		//Creating the JSON file path
 		String jsonFileName="UpdateUserDetails4.json";
@@ -138,7 +135,8 @@ public class TestPut {
 		JSONObject requestJSONObject = JsonProcessor.stringToJsonObject(requestPojoPut.toString());
 				
 		//Creating the Request object
-		APIRequest apiRequest = new APIRequest(filePath, requestJSONObject);
+		APIRequest apiRequest = new APIRequest(jsonObj.get("requestType").toString(),
+				jsonObj.get("requestApiPath").toString(),headers, requestJSONObject);
 		
 		//Creating object of APIHelper & calling the hitAPI() method using this object and obtaining the response
 		APIHelper apiHelper = new APIHelper();

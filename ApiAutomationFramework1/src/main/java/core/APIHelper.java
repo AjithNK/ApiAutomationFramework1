@@ -40,6 +40,7 @@ public class APIHelper {
 		
 
 		//request.header(header);
+		//Performing the Rest Assured method calls depending on the Request Type obtained
 		if(apiRequest.getRequestType().equalsIgnoreCase("get")) {
 			 response = request.get(apiRequest.getApiPath());
 		}

@@ -4,44 +4,6 @@
 <th>Method name</th>
 <th>Groups</th>
 </tr><tr>
-<td>test.Test1OldGet</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>testGet</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testGetListUsers</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testGetListResourses</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testGetSingleUsersNotFound</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testGetSingleUser</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
 <td>test.TestGet</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
@@ -49,35 +11,35 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testGetDelayedResponse</td>
+<td>verifyGetSingleResourceFunctionalityWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testGetSingleResource</td>
+<td>verifyGetDelayedResponseFunctionalityWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testGetListUsers</td>
+<td>verifyGetAllUsersFunctionalityWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testGetListResources</td>
+<td>verifyGetAllResourcesFunctionalityWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testGetSingleUsersNotFound</td>
+<td>verifyGetAllUsersFunctionalityWhenDataIsHardCoded</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testGetSingleResourceNotFound</td>
+<td>verifyGetSingleUserDetailsWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testGetUsers</td>
+<td>verifyGetSingleUserNotFoundWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testGetSingleUser</td>
+<td>verifyGetSingleResourceNotFoundFunctionalityWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -99,45 +61,11 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testDelete</td>
+<td>verifyDeleteUserFunctionalityWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testDelete2</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>test.Test1OldPost</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>testPost</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testPost2</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testPostOrchestrationUsingRequestPojo</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testPostOrchestration</td>
+<td>verifyDeleteUserFunctionalityWhenDataIsHardCoded</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -159,19 +87,19 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testPatch</td>
+<td>verifyPartialUpdateUserFunctionalityWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testPatch3</td>
+<td>verifyPartialUpdateUserFunctionalityWhenDataIsHardCoded</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testPatch2</td>
+<td>verifyPartialUpdateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testPatch4</td>
+<td>verifyPartialUpdateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -193,35 +121,31 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testPost</td>
+<td>verifyUserRegistrationUnsuccessfulWhenDataPassedFromJsonAndDynamicRequestBody</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testPost3</td>
+<td>verifyUserRegistrationSuccessfulWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testPost2</td>
+<td>verifyCreateUserFunctionalityWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testLoginUnSuccessful</td>
+<td>verifyUserLoginUnsuccessfulWhenDataIsHardCoded</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testPostOrchestrationUsingRequestPojo</td>
+<td>verifyCreateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testLoginSuccessful</td>
+<td>verifyCreateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>testRegistrationUnSuccessful</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testRegistrationSuccessful</td>
+<td>verifyCreateUserFunctionalityWhenDataIsHardCoded</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -243,19 +167,19 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>updateUser4</td>
+<td>verifyUpdateUserFunctionalityWhenDataIsHardCoded</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>updateUser</td>
+<td>verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>updateUser2</td>
+<td>verifyUpdateUserFunctionalityWhenDataIsPassedFromJson</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>updateUser3</td>
+<td>verifyUpdateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>

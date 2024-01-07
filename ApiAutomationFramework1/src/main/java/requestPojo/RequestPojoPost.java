@@ -32,10 +32,5 @@ public class RequestPojoPost {
 		
 	}
 	
-	
-    
-	
-	
-    
 
 }

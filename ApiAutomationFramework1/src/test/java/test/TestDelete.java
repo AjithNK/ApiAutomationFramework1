@@ -1,6 +1,5 @@
 package test;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
@@ -10,13 +9,12 @@ import org.testng.annotations.Test;
 import core.APIHelper;
 import core.APIRequest;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBodyData;
 
 public class TestDelete {
 	
 	//DELETE request (Delete user) with hard-coded values
 	@Test(enabled=true)
-	public void testDelete() {
+	public void verifyDeleteUserFunctionalityWhenDataIsHardCoded() {
 		
 		//Creating Request object
 		APIRequest apiRequest = new APIRequest("delete","https://reqres.in/api/users/10");
@@ -42,7 +40,7 @@ public class TestDelete {
 	
 	//DELETE request (Delete user) with details passed from json file
 	@Test(enabled=true)
-	public void testDelete2() {
+	public void verifyDeleteUserFunctionalityWhenDataIsPassedFromJson() {
 		
 		
 		//Creating the JSON file path

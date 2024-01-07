@@ -58,7 +58,7 @@ public class APIRequest {
 	}
 	
 	
-	//Constructor called for POST OR PUT OR PATCH request for which the details are hard-coded
+	//Constructor called for POST OR PUT OR PATCH request for which the details are passed as 4 arguments
 	public APIRequest(String requestType, String apiPath, HashMap<String, String> headers, JSONObject requestBody) {
 		
 		super();

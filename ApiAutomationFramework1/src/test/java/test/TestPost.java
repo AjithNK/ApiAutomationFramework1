@@ -11,16 +11,16 @@ import org.testng.annotations.Test;
 import core.APIHelper;
 import core.APIRequest;
 import core.JsonProcessor;
-import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import requestPojo.RequestPojoPost;
+import requestPojo.RequestPojoPut;
 
 @SuppressWarnings({"unused", "unchecked"})
 public class TestPost {
 
 	//POST request (Create User) with hard-coded values
-	@Test(enabled=false)
-	public void testPost()
+	@Test(enabled=true)
+	public void verifyCreateUserFunctionalityWhenDataIsHardCoded()
 	{					
 	    //Request headers	
 		HashMap<String, String> headers = new HashMap<String, String>();
@@ -55,8 +55,8 @@ public class TestPost {
 	
 	
 	//POST request (Create User) with details passed from json file
-	@Test (enabled=false)
-	 public void testPost2() {
+	@Test (enabled=true)
+	 public void verifyCreateUserFunctionalityWhenDataIsPassedFromJson() {
 		
 		//Creating the JSON file path
 		String jsonFileName="CreateUser2.json";
@@ -90,8 +90,8 @@ public class TestPost {
 	 
 	 
 	//POST request (Create user) with details passed from json file and request is dynamic
-	@Test(enabled=false)
-	public void testPost3() {
+	@Test(enabled=true)
+	public void verifyCreateUserFunctionalityWhenDataPassedFromJsonAndDynamicRequestBody() {
 		 
 		//Creating the JSON file path
 		String jsonFileName="CreateUser3.json";
@@ -129,70 +129,58 @@ public class TestPost {
 		 
 	}
 	 
-	 
-	 //EDIT COMMENT
-	//POST REQUEST 4 - Create User  
-	//pass data from json file and request obtained using RequestPojo)
-	@Test(enabled=false)
+	
+	//POST request (Create user) with details passed from json file and request is passed as a pojo
+	@Test(enabled=true)
 
-	public void testPostOrchestrationUsingRequestPojo() {
+	public void verifyCreateUserFunctionalityWhenDataPassedFromJsonAndRequestBodyAsPojo() {
 		 
 		//Creating the JSON file path
 		String jsonFileName="CreateUser4.json";
 		String filePath=Paths.get(System.getProperty("user.dir"),"src","main","resources","apis",jsonFileName).toString();
-					
+		
+		//Reading the data from JSON file and obtaining the jsonObject 
+		JSONObject jsonObj = JsonProcessor.readFromJsonFile(filePath);
+		
 		//Request headers	
 		HashMap<String, String> headers = new HashMap<String, String>();
 		headers.put("Content-Type","application/json");
 		headers.put("Accept","*/*");
 		headers.put("Connection","keep-alive"); 
 		
-		
-		
-		
-		RequestPojoPost objRequest = new RequestPojoPost();
-		
-		objRequest.setName("Raj");
-		objRequest.setJob("leader");
-		
-		System.out.println(objRequest);
-		
-		
-		JSONObject requestObject=JsonProcessor.stringToJsonObject(objRequest.toString());
-		
-		JSONObject jsonObject = JsonProcessor.readFromJsonFile(filePath);
-		
-		
-		
-		
-		
-		
-		
+		//Creating object of request pojo
+		RequestPojoPost requestPojoPost = new RequestPojoPost();
+		requestPojoPost.setName("Raj");
+		requestPojoPost.setJob("leader");
+				
+		//Obtaining the request as JSON Object
+		JSONObject requestJSONObject = JsonProcessor.stringToJsonObject(requestPojoPost.toString());
+						
 		//Creating the Request object
-		APIRequest apiRequest= new APIRequest(jsonObject.get("requestType").toString(),
-		jsonObject.get("requestApiPath").toString(),headers,requestObject) ;
-		
+		APIRequest apiRequest = new APIRequest(jsonObj.get("requestType").toString(),
+				jsonObj.get("requestApiPath").toString(),headers, requestJSONObject);
+				
 		//Creating object of APIHelper & calling the hitAPI() method using this object and obtaining the response
 		APIHelper apiHelper = new APIHelper();
 		Response response = apiHelper.hitAPI(apiRequest);
-		
+				
 		//Console output of the response body and headers
-		System.out.println(response.getBody().asPrettyString());
+		System.out.println(response.body().asPrettyString());
 		System.out.println(response.getHeaders());
-		
-		//Asserting the response details
+				
+		//Asserting the response details	
 		Assert.assertEquals(response.getStatusCode(), 201);
 		Assert.assertEquals(response.getContentType(), "application/json; charset=utf-8");
 		Assert.assertEquals(response.getStatusLine(), "HTTP/1.1 201 Created");
 		Assert.assertTrue(response.getTimeIn(TimeUnit.MILLISECONDS)<3000);
+
 		
-		 
 	} 
 	 
 
 	//POST request (Register user) with details passed from json file
 	@Test(enabled=true)
-	public void testRegistrationSuccessful() {
+	public void verifyUserRegistrationSuccessfulWhenDataIsPassedFromJson() {
 		
 		//Request headers
 		HashMap<String, String> headers = new HashMap<String, String>();
@@ -227,14 +215,13 @@ public class TestPost {
 		Assert.assertEquals(response.getStatusLine(),"HTTP/1.1 201 Created");
 		Assert.assertTrue(response.getTimeIn(TimeUnit.MILLISECONDS)<3000);
 		
-		
-		
+				
 	}
 	
 	
 	//POST request (User Registration UnSuccessful) with details passed from json file and request is dynamic
-	@Test(enabled=false) 
-	public void testRegistrationUnSuccessful() {
+	@Test(enabled=true) 
+	public void verifyUserRegistrationUnsuccessfulWhenDataPassedFromJsonAndDynamicRequestBody() {
 
 		//Request headers
 		HashMap<String, String> headers = new HashMap<String, String>();
@@ -271,18 +258,10 @@ public class TestPost {
 	}
 	
 	
-	//do this using - reading from file and request pojo
-	//POST request (Login) with details passed from json file
-	@Test(enabled=false) 
-	public void testLoginSuccessful() {
-		
-	}
-	
-	
 
-	//POST request (Login UnSuccessful) with hard-coded values
-	@Test(enabled=false) 
-	public void testLoginUnSuccessful() {
+	//POST request (User Login UnSuccessful) with hard-coded values
+	@Test(enabled=true) 
+	public void verifyUserLoginUnsuccessfulWhenDataIsHardCoded() {
 			
 		//Request headers
 		HashMap<String, String> headers = new HashMap<String, String>();

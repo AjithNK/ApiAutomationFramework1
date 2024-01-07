@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	
-  <test thread-count="1" name="Test">
-    <classes>
-      <class name="test.TestPost"/>
-      <class name="test.TestPatch"/>
-      <class name="test.TestDelete"/>
-      <class name="test.TestGet"/>
-      <class name="test.Test1OldGet"/>
-      <class name="test.Test1OldPost"/>
-      <class name="test.TestPut"/>
-    </classes>
-  </test> <!-- Test -->
+	<test thread-count="5" name="Test1">
+		<classes>
+			<class name="test.TestPost" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Test2">
+		<classes>
+			<class name="test.TestPut" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Test3">
+		<classes>
+			<class name="test.TestPatch" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Test4">
+		<classes>
+			<class name="test.TestGet" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Test5">
+		<classes>
+			<class name="test.TestDelete" />
+		</classes>
+	</test> <!-- Test -->
+
 </suite> <!-- Suite -->
